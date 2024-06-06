@@ -1,10 +1,13 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import PropTypes from 'prop-types';
 
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
 
-    const authInfo = { }
+    const [cart, setCart] = useState([]);
+
+    const authInfo = { cart, setCart}
+
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

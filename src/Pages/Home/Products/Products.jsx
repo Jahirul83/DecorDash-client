@@ -8,7 +8,7 @@ const Products = () => {
             {
                 data.map(card => <ProductCard
                     key={card.id}
-                    card = {card}
+                    product = {card}
                 ></ProductCard>)
 }
         </div >

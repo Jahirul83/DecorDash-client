@@ -1,12 +1,17 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 
 const NavBar = () => {
     const navOptions = <>
-    <li><Link to={"/"}>Home</Link></li>
-    <li><Link to={"/products"}>Products</Link></li>
-    <li><Link to={"/login"}>Login</Link></li>
-</>
+        <li><Link to={"/"}>Home</Link></li>
+        <li><Link to={"/products"}>Products</Link></li>
+        <li><Link to={"/cart"}>Cart</Link></li>
+        <li><Link to={"/login"}>Login</Link></li>
+    </>
+    const { cart, setCart } = useContext(AuthContext);
+
     return (
         <>
             <div className="navbar max-w-screen-xl fixed z-10 bg-opacity-30 bg-black text-white bg-base-100">
@@ -27,6 +32,9 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    <div>
+                        <p>cart({cart?.length})</p>
+                    </div>
                     <a className="btn">Login</a>
                 </div>
             </div>
