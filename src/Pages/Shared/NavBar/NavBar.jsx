@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { TiShoppingCart } from "react-icons/ti";
+import userDefaultPic from "../../../assets/user.png"
 import { AuthContext } from "../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const NavBar = () => {
@@ -10,7 +12,19 @@ const NavBar = () => {
         <li><Link to={"/products"}>Products</Link></li>
         <li><Link to={"/cart"}>Cart</Link></li>
     </>
-    const { cart, setCart } = useContext(AuthContext);
+    const { cart, setCart, user, LogOut } = useContext(AuthContext);
+
+
+
+    const handleLogout = () => {
+        LogOut()
+            .then(() => {
+                Swal(" Logout Successful", "You clicked the button!", "success");
+            }).catch((err) => {
+                console.log(err);
+            });
+
+    }
 
     return (
         <>
@@ -40,7 +54,24 @@ const NavBar = () => {
                             <p className="flex items-center p-2 rounded-xl bg-blue-600 text-white border"><TiShoppingCart className="text-xl mr-2" /><span className="bg-pink-500 p-1 rounded-full">{cart?.length}</span></p>
                         </div>
                     </Link>
-                    <a className="btn">Login</a>
+                    {
+                        user ?
+                            <div className="dropdown dropdown-end mr-3">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={user?.photoURL ? user.photoURL : userDefaultPic} />
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
+
+                                    <Link className="ml-3 mb-2" to="/profile"><li>Profile</li></Link>
+                                    <Link className="ml-3" to="/register"><li>Register</li></Link>
+                                    <li><a onClick={handleLogout}>Logout</a></li>
+                                </ul>
+                            </div>
+                            :
+                            <Link to='/login'><button className="btn text-white bg-blue-600">Login</button></Link>
+                    }
                 </div>
             </div>
         </>

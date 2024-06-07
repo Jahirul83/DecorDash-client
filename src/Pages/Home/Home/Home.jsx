@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ProductCard from "../Products/ProductCard";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
                                 <ProductCard
                                     key={card._id}
                                     product={card}
-                                    showAddToCartButton = {false}
+                                    showAddToCartButton={false}
                                 ></ProductCard>
                             ))
                         }
@@ -26,8 +27,8 @@ const Home = () => {
                 </div>
             </div>
             <div className="text-center mb-2">
-                <Link to='/products'><button className="btn bg-blue-600 text-white">Show ALL</button></Link>
-            </div>
+                <Link to='/products'><button className="btn bg-blue-600 text-white">Show ALL <FaArrowRightLong /></button></Link>
+        </div>
         </div >
     );
 };
