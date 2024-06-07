@@ -38,7 +38,11 @@ const Login = () => {
         SignInWithGoogle()
             .then((result) => {
                 console.log(result?.user);
-                Swal("Good job!", "You clicked the button!", "success");
+                Swal.fire({
+                    title: "login successful",
+                    text: "You clicked the button!",
+                    icon: "success"
+                });
                 navigate(location?.state ? location.state : '/');
             }).catch((err) => {
                 console.error(err);

@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 
 
 const ProductCard = ({ product, showAddToCartButton }) => {
-    const { cart, setCart } = useContext(AuthContext);
+    const { cart, setCart, user } = useContext(AuthContext);
     const { _id, name, description, price, imageUrl } = product;
-    const userId = 2;
+    // const userId = 2;
+    // console.log(user.email);
     console.log("cart", cart);
 
     const handleAddToCart = (data) => {
-        console.log(data);
-        setCart([...cart, { ...data, userId: userId }]);
+        setCart([...cart, { ...data, userEmail: user.email }]);
     }
     const removeFromCart = (itemId) => {
         setCart(cart.filter(item => item._id !== itemId));
