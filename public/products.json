@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "_id": 1,
       "name": "Elegant Sofa",
       "description": "A comfortable and stylish sofa for your living room.",
       "price": 699,
@@ -8,7 +8,7 @@
       "imageUrl": "https://example.com/images/sofa.jpg"
     },
     {
-      "id": 2,
+      "_id": 2,
       "name": "Modern Coffee Table",
       "description": "A sleek and contemporary coffee table to complement your sofa set.",
       "price": 299,
@@ -16,7 +16,7 @@
       "imageUrl": "https://example.com/images/coffee-table.jpg"
     },
     {
-      "id": 3,
+      "_id": 3,
       "name": "Vintage Floor Lamp",
       "description": "An elegant floor lamp with a vintage touch to illuminate your space.",
       "price": 149,
@@ -24,7 +24,7 @@
       "imageUrl": "https://example.com/images/floor-lamp.jpg"
     },
     {
-      "id": 4,
+      "_id": 4,
       "name": "Cozy Throw Pillow Set",
       "description": "A set of cozy throw pillows to add comfort and style to your seating area.",
       "price": 39,
@@ -32,7 +32,7 @@
       "imageUrl": "https://example.com/images/throw-pillow.jpg"
     },
     {
-      "id": 5,
+      "_id": 5,
       "name": "Rustic Wall Clock",
       "description": "A rustic wall clock to enhance the charm of your farmhouse-style decor.",
       "price": 49,
@@ -40,7 +40,7 @@
       "imageUrl": "https://example.com/images/wall-clock.jpg"
     },
     {
-      "id": 6,
+      "_id": 6,
       "name": "Minimalist Dining Chairs",
       "description": "A set of minimalist dining chairs designed for modern dining spaces.",
       "price": 129,
@@ -48,7 +48,7 @@
       "imageUrl": "https://example.com/images/dining-chairs.jpg"
     },
     {
-      "id": 7,
+      "_id": 7,
       "name": "Abstract Canvas Painting",
       "description": "An abstract canvas painting to add an artistic touch to your walls.",
       "price": 199,
@@ -56,7 +56,7 @@
       "imageUrl": "https://example.com/images/canvas-painting.jpg"
     },
     {
-      "id": 8,
+      "_id": 8,
       "name": "Scandinavian Area Rug",
       "description": "A Scandinavian-inspired area rug to tie together your room decor.",
       "price": 249,
@@ -64,7 +64,7 @@
       "imageUrl": "https://example.com/images/area-rug.jpg"
     },
     {
-      "id": 9,
+      "_id": 9,
       "name": "Industrial Pendant Light",
       "description": "An industrial-style pendant light fixture to illuminate your kitchen or dining area.",
       "price": 79,
@@ -72,7 +72,7 @@
       "imageUrl": "https://example.com/images/pendant-light.jpg"
     },
     {
-      "id": 10,
+      "_id": 10,
       "name": "Bohemian Throw Blanket",
       "description": "A bohemian-style throw blanket with colorful patterns for a cozy vibe.",
       "price": 59,

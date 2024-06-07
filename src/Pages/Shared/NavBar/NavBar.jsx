@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { TiShoppingCart } from "react-icons/ti";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 
@@ -8,7 +9,6 @@ const NavBar = () => {
         <li><Link to={"/"}>Home</Link></li>
         <li><Link to={"/products"}>Products</Link></li>
         <li><Link to={"/cart"}>Cart</Link></li>
-        <li><Link to={"/login"}>Login</Link></li>
     </>
     const { cart, setCart } = useContext(AuthContext);
 
@@ -22,6 +22,9 @@ const NavBar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
                             {navOptions}
+                            <div>
+                                <p className="flex items-center p-2 rounded-xl bg-blue-600 text-white border"><TiShoppingCart className="text-xl mr-2" /><span className="bg-pink-500 p-1 rounded-full">{cart?.length}</span></p>
+                            </div>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">Decor<span className="text-blue-400">Dash</span></a>
@@ -32,8 +35,8 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div>
-                        <p>cart({cart?.length})</p>
+                    <div className="hidden lg:flex mr-2">
+                        <p className="flex items-center p-2 rounded-xl bg-blue-600 text-white border"><TiShoppingCart className="text-xl mr-2" /><span className="bg-pink-500 p-1 rounded-full">{cart?.length}</span></p>
                     </div>
                     <a className="btn">Login</a>
                 </div>
