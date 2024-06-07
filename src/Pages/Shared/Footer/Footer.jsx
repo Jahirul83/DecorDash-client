@@ -46,7 +46,7 @@ const Footer = () => {
                     </div>
                 </nav>
             </footer>
-            <footer className="footer footer-center p-4 bg-base-300 text-base-content border-t-4 border-zinc-700	">
+            <footer className="footer footer-center p-4 bg-base-300 text-base-content border-t-4 border-zinc-700">
                 <aside>
                     <p>Copyright © 2024 - All right reserved by DecorDash Ltd</p>
                 </aside>

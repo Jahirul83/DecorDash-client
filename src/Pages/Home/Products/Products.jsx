@@ -9,6 +9,7 @@ const Products = () => {
                 data.map(card => <ProductCard
                     key={card._id}
                     product = {card}
+                    showAddToCartButton = {true}
                 ></ProductCard>)
 }
         </div >

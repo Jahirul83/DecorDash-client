@@ -18,6 +18,7 @@ const Home = () => {
                                 <ProductCard
                                     key={card._id}
                                     product={card}
+                                    showAddToCartButton = {false}
                                 ></ProductCard>
                             ))
                         }
