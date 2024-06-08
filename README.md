@@ -13,6 +13,9 @@ And Then
 ```bash
 npm run dev
 ```
+# Live Link 
+Live Link: [Link](https://decor-dash-9e7a1.web.app/)
+
 # A brief description of the design choices and any libraries used.
 This project utilizes a combination of libraries to achieve a balance between flexibility, pre-built components, and animation:
 
