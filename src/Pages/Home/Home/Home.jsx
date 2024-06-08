@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import ProductCard from "../Products/ProductCard";
 import { FaArrowRightLong } from "react-icons/fa6";
 import About from "../../About/About";
+import FAQ from "../../FAQ/FAQ";
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
                 <Link to='/products'><button className="btn bg-blue-600 text-white">Show ALL <FaArrowRightLong /></button></Link>
             </div>
             <About></About>
+            <FAQ></FAQ>
         </div >
     );
 };
