@@ -7,6 +7,7 @@ import Cart from "../Pages/Home/Products/Cart/Cart";
 import Login from "../Pages/LogIn/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Order from "../Pages/Order/Order";
 
 
 const Router =createBrowserRouter([
@@ -36,6 +37,11 @@ const Router =createBrowserRouter([
         {
             path:"/register",
             element:<Register></Register> ,
+        },
+        {
+            path:"/order",
+            element:<Order></Order> ,
+            loader: () => fetch('http://localhost:5000/carts')
         },
     ]
     },
