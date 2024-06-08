@@ -30,7 +30,5 @@ This combination of ReactJS, Tailwind CSS and DaisyUI offers:
 
 Flexibility: Tailwind's utility classes and React's component-based approach allow for a high degree of design customization.
 Efficiency: Pre-built components from DaisyUI accelerate development and ensure design consistency.
-Engagement: AOS adds interactivity and visual interest to the user interface.
-By leveraging these libraries, you can create a modern, responsive, and visually appealing web application with ReactJS.
 
 
