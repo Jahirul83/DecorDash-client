@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ProductCard from "../Products/ProductCard";
 import { FaArrowRightLong } from "react-icons/fa6";
+import About from "../../About/About";
 
 
 const Home = () => {
@@ -28,7 +29,8 @@ const Home = () => {
             </div>
             <div className="text-center mb-2">
                 <Link to='/products'><button className="btn bg-blue-600 text-white">Show ALL <FaArrowRightLong /></button></Link>
-        </div>
+            </div>
+            <About></About>
         </div >
     );
 };

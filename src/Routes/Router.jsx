@@ -8,43 +8,52 @@ import Login from "../Pages/LogIn/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Order from "../Pages/Order/Order";
+import Profile from "../Pages/Profile/Profile";
 
 
-const Router =createBrowserRouter([
+const Router = createBrowserRouter([
     {
-      path: "/",
-      element: <Root></Root>,
-      // errorElement: <ErrorPage></ErrorPage>,
-      children:[
-        {
-            path:"/",
-            element: <Home></Home>,
-            loader: () => fetch('http://localhost:5000/products')
-        },
-        {
-            path:"/products",
-            element: <PrivateRoute><Products></Products></PrivateRoute>,
-            loader: () => fetch('http://localhost:5000/products')
-        },
-        {
-            path:"/cart",
-            element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-        },
-        {
-            path:"/login",
-            element:<Login></Login> ,
-        },
-        {
-            path:"/register",
-            element:<Register></Register> ,
-        },
-        {
-            path:"/order",
-            element:<Order></Order> ,
-            loader: () => fetch('http://localhost:5000/carts')
-        },
-    ]
+        path: "/",
+        element: <Root></Root>,
+        // errorElement: <ErrorPage></ErrorPage>,
+        children: [
+            {
+                path: "/",
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/products')
+            },
+            {
+                path: "/products",
+                element: <PrivateRoute><Products></Products></PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/products')
+            },
+            {
+                path: "/cart",
+                element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+            },
+            {
+                path: "/login",
+                element: <Login></Login>,
+            },
+            {
+                path: "/register",
+                element: <Register></Register>,
+            },
+            {
+                path: "/order",
+                element: <PrivateRoute><Order></Order></PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/carts')
+            },
+            {
+                path: "/profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>,
+            },
+            // {
+            //     path:"/register",
+            //     element:<Register></Register> ,
+            // },
+        ]
     },
-  ]);
+]);
 
 export default Router;
