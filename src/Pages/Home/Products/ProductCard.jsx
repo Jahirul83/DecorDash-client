@@ -9,10 +9,11 @@ const ProductCard = ({ product, showAddToCartButton }) => {
     const { _id, name, description, price, imageUrl } = product;
     // const userId = 2;
     // console.log(user.email);
-    console.log("cart", cart);
+    // console.log("cart", cart);
 
     const handleAddToCart = (data) => {
-        setCart([...cart, { ...data, userEmail: user.email }]);
+        const { _id, ...productData } = data; 
+        setCart([...cart, { ...productData, userEmail: user.email }]);
     }
     const removeFromCart = (itemId) => {
         setCart(cart.filter(item => item._id !== itemId));
