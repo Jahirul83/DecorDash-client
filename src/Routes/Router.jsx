@@ -22,12 +22,12 @@ const Router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://decor-dash-server.vercel.app/products')
             },
             {
                 path: "/products",
                 element: <PrivateRoute><Products></Products></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://decor-dash-server.vercel.app/products')
             },
             {
                 path: "/cart",
@@ -44,7 +44,7 @@ const Router = createBrowserRouter([
             {
                 path: "/order",
                 element: <PrivateRoute><Order></Order></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/carts')
+                loader: () => fetch('https://decor-dash-server.vercel.app/carts')
             },
             {
                 path: "/profile",

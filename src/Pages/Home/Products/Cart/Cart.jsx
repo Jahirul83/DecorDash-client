@@ -14,7 +14,7 @@ const Cart = () => {
 
         console.log(cart);
 
-        axios.post('http://localhost:5000/carts',  cart )
+        axios.post('https://decor-dash-server.vercel.app/carts',  cart )
             .then(function (response) {
                 console.log(response);
                 Swal.fire({
