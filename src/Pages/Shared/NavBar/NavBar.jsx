@@ -7,13 +7,22 @@ import Swal from "sweetalert2";
 
 
 const NavBar = () => {
+    const { cart, setCart, user, LogOut } = useContext(AuthContext);
     const navOptions = <>
         <li><Link to={"/"}>Home</Link></li>
         <li><Link to={"/products"}>Products</Link></li>
-        <li><Link to={"/cart"}>Cart</Link></li>
-        <li><Link to={"/order"}>Your Order</Link></li>
+        <li><Link to={"/about"}>About</Link></li>
+        <li><Link to={"/faq"}>FAQ</Link></li>
+        
+        {
+
+            user &&
+            <>
+                <li><Link to={"/cart"}>Cart</Link></li>
+                <li><Link to={"/order"}>Your Order</Link></li>
+            </>
+        }
     </>
-    const { cart, setCart, user, LogOut } = useContext(AuthContext);
 
 
 
@@ -42,7 +51,7 @@ const NavBar = () => {
                             </div>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Decor<span className="text-blue-400">Dash</span></a>
+                   <Link to={'/'}> <a className="btn btn-ghost text-xl">Decor<span className="text-blue-400">Dash</span></a></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-bold text-blue-600">

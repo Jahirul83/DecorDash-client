@@ -4,6 +4,7 @@ import ProductCard from "../Products/ProductCard";
 import { FaArrowRightLong } from "react-icons/fa6";
 import About from "../../About/About";
 import FAQ from "../../FAQ/FAQ";
+import Contact from "../../Contact/Contact";
 
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
             </div>
             <About></About>
             <FAQ></FAQ>
+            <Contact></Contact>
         </div >
     );
 };

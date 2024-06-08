@@ -40,7 +40,7 @@ const FAQ = () => {
                                 How can I stay updated on new arrivals and promotions?
                             </div>
                             <div className="collapse-content">
-                                <p>Stay updated by subscribing to our newsletter and following us on social media. You'll be the first to know about new arrivals, exclusive promotions, and design tips. Join our community to get inspired and make the most of our latest offerings.</p>
+                                <p>Stay updated by subscribing to our newsletter and following us on social media. You`ll be the first to know about new arrivals, exclusive promotions, and design tips. Join our community to get inspired and make the most of our latest offerings.</p>
                             </div>
                         </div>
                     </div>

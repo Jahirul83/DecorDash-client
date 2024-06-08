@@ -16,7 +16,7 @@ const About = () => {
                         <h2 className="text-3xl font-bold">Our Commitment</h2>
                         <p className="py-6">We are dedicated to quality, sustainability, and customer satisfaction. Join us in making your home a beautiful and inviting space.</p>
                         <h2 className="text-3xl font-bold">Get Inspired</h2>
-                        <p className="py-6">Explore our ideas and tips for decorating your home. Whether it's a small update or a complete makeover, we provide the inspiration you need.</p>
+                        <p className="py-6">Explore our ideas and tips for decorating your home. Whether it`s a small update or a complete makeover, we provide the inspiration you need.</p>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,8 @@ import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Order from "../Pages/Order/Order";
 import Profile from "../Pages/Profile/Profile";
+import About from "../Pages/About/About";
+import FAQ from "../Pages/FAQ/FAQ";
 
 
 const Router = createBrowserRouter([
@@ -48,10 +50,14 @@ const Router = createBrowserRouter([
                 path: "/profile",
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>,
             },
-            // {
-            //     path:"/register",
-            //     element:<Register></Register> ,
-            // },
+            {
+                path:"/about",
+                element:<About></About>
+            },
+            {
+                path:"/faq",
+                element:<FAQ></FAQ>
+            },
         ]
     },
 ]);
